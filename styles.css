@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+.flex-container{
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* flex-flow: row wrap; */
+    /* justify-content: start; */
+    /* align-items: baseline; */
+    /* align-content: space-between; */
+    /* order: 2;  */
+    /* flex-grow: 2; derecho a ocupar espacio */
+    /* flex-shrink: 2; hasta cuando se puede encojer */
+    /* flex-basis: 200px; darle medida mínima, también en % */
+    /* flex: 0 0 200px; poner las 3 opciones */
+
+    height: 400px;
+    flex-wrap: wrap;
+    background-color: burlywood;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.flex-container div{
+    background-color: gainsboro;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-style: 30px;
+    border: 2px solid #000;
+
+}
