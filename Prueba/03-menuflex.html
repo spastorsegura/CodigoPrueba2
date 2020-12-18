@@ -10,6 +10,7 @@
             padding: 0;
             box-sizing: border-box;
             border: 1px solid red;
+            font-family: arial;
         }
 
         .contenedor{
@@ -20,14 +21,26 @@
 
         ul{
             display: flex;
+            width: 500px;
+            justify-content: space-around;
         }
 
         li{
             list-style: none;
         }
-
+/* ya no se usan float */
         nav{
             display: flex;
+            justify-content: space-between;
+            background-color: steelblue;
+            color: white;
+        }
+
+        ul>li:nth-child(5){
+            border: 2px solid skyblue;
+            padding: 5px;
+            justify-content: space-between;
+            border-radius: 10px;
         }
 
     </style>
