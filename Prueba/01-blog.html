@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <style>
+        .papa{
+            width: 100%;
+            height: 500px;
+            border: 1px solid red;
+            display: flex;
+            /* center, flex-end, space-around, space-evenly, space-between */
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: center;
+            /* nowrap, wrap, wrap-reverse */
+            flex-wrap: wrap;
+        }
+        .hijo{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+        }
+
+        .caja1{
+            align-self: flex-end;
+        }
+
+        .caja9{
+            justify-self: right;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="papa">
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+        <div class="hijo">Hijo</div>
+    </div>
 </body>
 </html>
