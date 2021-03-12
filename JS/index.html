@@ -6,8 +6,88 @@
     <title>Javascript</title>
 </head>
 <body>
-    <button>Hola mundo</button>
-    <script src="./main.js"></script>
+    <!-- <script src="./main.js"></script>
+    <script src="./prueba.js"></script> -->
+
+    <input type="text" id="inputtexto">
+    <button id="botoninput">Agregar</button>
+    <div id="lista"></div>
+
+
+    <!-- form -->
+    <section>
+        <h1>Registrar usuario</h1>
+        <hr>
+        <form id="registro">
+            <label>Nombre:</label>
+            <input type="text" id="nombre">
+            <br>
+            <label>Apellidos:</label>
+            <input type="text" id="apellidos">
+            <br>
+            <label>Edad:</label>
+            <input type="number" id="edad">
+            <br>
+            <input type="submit" value="Guardar usuario">
+        </form>
+        <br>
+        <button id="verusuario">Ver usuario guardado</button>
+    </section>
+
+
+    <script>
+        var inputtexto = document.getElementById("inputtexto");
+        var btntexto = document.getElementById("botoninput");
+        var divlista = document.getElementById("lista");
+
+        btntexto.addEventListener("click",function(){
+            console.log(inputtexto.value)
+        })
+        inputtexto.addEventListener("keyup",function(e){
+            if(e.key==="Enter"){
+                console.log("Enter!")
+                var nuevoParrafo=document.createElement("p");
+                nuevoParrafo.innerHTML=inputtexto.value;
+                divlista.appendChild(nuevoParrafo);
+                inputtexto.value="";
+            }
+        })
+
+        var formulario=document.getElementById("registro")
+        var inputNombre=document.getElementById("nombre")
+        var inputApellido=document.getElementById("apellidos")
+        var inputEdad=document.getElementById("edad")
+
+        formulario.addEventListener("submit",function(evento){
+            evento.preventDefault();
+
+            var objUsuario={
+                nombre:inputNombre.value,
+                apellidos:inputApellido.value,
+                edad:inputEdad.value
+            }
+            // console.log(objUsuario)
+
+            var objATexto = JSON.stringify(objUsuario)
+            console.log(objATexto)
+
+            localStorage.setItem("usuario",objATexto)
+        })
+
+    /*  ---------------- */
+
+    var btnVerUsuario = document.getElementById("verusuario");
+
+    btnVerUsuario.addEventListener("click", function(){
+        var usuarioObtenido = localStorage.getItem("usuario");
+        var TextoAJavascript = JSON.parse(usuarioObtenido);
+
+        console.log(TextoAJavascript);
+    })
+        
+
+
+    </script>
 
 </body>
 </html>
